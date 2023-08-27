@@ -1,0 +1,14 @@
+body>.window{
+    margin: 10px 20px;
+    padding: 4px 8px;
+    width: fit-content;
+}
+
+body>.window>.title{
+    width: 100%;
+    border-bottom: solid #e8e8ee 1px;
+}
+
+body>.window>.content{
+    margin: 8px;
+}

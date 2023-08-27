@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;800&display=swap');
+
+@keyframes rainbow{
+    100% { background-position-x: 200%; }
+}
+
+*{
+    color: #e4e4ea;
+    margin: 0;
+    font: medium 'Noto Sans JP', sans-serif;
+    font-weight: 200;
+}
+
+.bold{
+    font-weight: 400;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.rainbow{
+    font-weight: 400;
+    background: linear-gradient(to right, #ffaaff, #ffffaa, #aaffff, #ffaaff) 0% center/200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 12s linear infinite;
+}
+
+.hide{
+    display: none !important;
+}
+
+a{
+    text-decoration-thickness: 1px;
+}
+
+a:hover{
+    text-decoration-thickness: 1.2px;
+    text-decoration-color: #ff3380;
+}
+
+a.anchor{
+    display: block;
+    padding-top: 70px;
+    margin-top: -70px;
+}
+
+body{
+    background-color: #030308;
+}
+
+.window{
+    background-color: #0a0a1280;
+    border-left: solid 1px;
+    border-bottom: solid 1px;
+}
+
+#back{
+    margin: 0 2vh;
+    user-select: none;
+    z-index: -1;
+    position: fixed;
+    width: 100vh;
+    height: 100vw;
+    word-break: break-all;
+    font-size: 8vh;
+    color: #ffffff00;
+    text-shadow: 0 0 6px #ffffff10;
+    transform-origin: left top;
+    transform: translateY(95vh) rotate(270deg);
+    filter: blur(1.0);
+}
+
+#header{
+    position: sticky;
+    top: 0;
+    padding: 10px 10px 10px 20px;
+    background-color: #0a0a12c0;
+    border-left: solid 1px;
+    border-bottom: solid 1px;
+}
+
+#header>.title{
+    font-size: 150%;
+    margin-right: 20px;
+}
+
+#header a{
+    margin: 0 6px;
+}
