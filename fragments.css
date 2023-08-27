@@ -25,10 +25,9 @@ body>.tab{
 
 .fragment .head>.lore{
     font-size: 80%;
-    vertical-align: bottom;
     text-indent: calc(-2em - 3px);
     padding-left: calc(2em + 3px);
-    transform: translateY(4px);
+    transform: translateY(4px) translateZ(-1);
 }
 
 .fragment .head>.lore::before{
@@ -56,7 +55,7 @@ body>.tab{
         margin-left: 1em;
         font-size: 60%;
         vertical-align: bottom;
-        transform: translateY(-0.2em);
+        transform: none;
     }
     .fragment .head>.lore::before{
         margin-left: 0;
