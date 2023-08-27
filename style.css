@@ -63,19 +63,17 @@ body{
 }
 
 #back{
-    margin: 0 2vh;
     user-select: none;
     z-index: -1;
     position: fixed;
     width: 100vh;
     height: 100vw;
     word-break: break-all;
-    font-size: 8vw;
+    font-size: 6vw;
     color: #ffffff00;
-    text-shadow: 0 0 6px #ffffff10;
+    text-shadow: 0 0 12px #ffffff0c;
     transform-origin: left top;
     transform: translateY(95vh) rotate(270deg);
-    filter: blur(1.0);
 }
 
 #header{
