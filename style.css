@@ -8,6 +8,7 @@
     color: #d4d4da;
     margin: 0;
     font: medium 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
     font-weight: 200;
 }
 
@@ -43,8 +44,12 @@ a:hover{
 
 a.anchor{
     display: block;
-    padding-top: 70px;
-    margin-top: -70px;
+    margin-top: -3.0lh;
+    padding-top: 3.0lh;
+}
+
+br.narrow{
+    display: none;
 }
 
 body{
@@ -65,7 +70,7 @@ body{
     width: 100vh;
     height: 100vw;
     word-break: break-all;
-    font-size: 8vh;
+    font-size: 8vw;
     color: #ffffff00;
     text-shadow: 0 0 6px #ffffff10;
     transform-origin: left top;
@@ -89,4 +94,20 @@ body{
 
 #header a{
     margin: 0 6px;
+}
+
+@media screen and (max-width:959px) {
+    .menu{
+        display: block;
+        width: fit-content;
+        margin: 0.4rem 0 0 auto;
+    }
+    a.anchor{
+        display: block;
+        padding-top: 4.0lh;
+        margin-top: -4.0lh;
+    }
+    br.narrow{
+        display: inline;
+    }
 }
