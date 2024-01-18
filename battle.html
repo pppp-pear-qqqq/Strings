@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>"Strings".Trailer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <div id="back">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div id="header">
+        <span class="title">"Strings".Trailer</span><span class="menu"><a href="./index.html#desc">概要</a><a href="./index.html#system">システム</a><a href="./index.html#attention">諸注意</a><a href="./index.html#schedule">公開予定</a><a href="./fragments.html">フラグメント</a><a href="#battle">戦闘システム</a></span>
+    </div>
+    <div class="window">
+        <a id="battle" class="anchor"></a>
+        <p class="title">戦闘まで</p>
+        <p class="content">
+            このゲームの戦闘は基本的に1対1のPvPとなります。<br>
+            一部ではNPCとの戦闘も発生するかもしれませんが、いずれにしてもルールは同一です。<br>
+            <br>
+            他キャラクターに戦闘を仕掛ける際「勝つつもりで挑む」「負けるつもりで挑む」の選択肢が発生し、<br>
+            また受ける側には「話し合う」「逃げる」「勝つつもりで挑む」「負けるつもりで挑む」の選択肢が発生します。<br>
+            受ける側は、仕掛けた側がどういったつもりで挑んできたのかわかりません。<br>
+            <dl>
+                <dt>「話し合う」</dt>
+                <dd>戦闘の発生が保留され相手に個別メッセージを送ることができます。</dd>
+                <dt>「逃げる」</dt>
+                <dd>戦闘がキャンセルされ何も起こらず終了します。</dd>
+                <dt>「勝つつもりで挑む」</dt>
+                <dd>相手も勝つつもりだった場合、戦闘が発生します。相手が負けるつもりだった場合は無条件で勝利します。</dd>
+                <dt>「負けるつもりで挑む」</dt>
+                <dd>相手も負けるつもりだった場合、戦闘が発生します。相手が勝つつもりだった場合は無条件で敗北します。</dd>
+            </dl>
+            受ける側がリアクションをして初めて戦闘が発生します。<br>
+            一定時間選択されなかった場合は「逃げる」を選択した扱いとなります。<br>
+            <br>
+            戦闘に勝利した場合、相手の所有するフラグメントをランダムに一つ奪い取ります。<br>
+        </p>
+    </div>
+    <div class="window">
+        <p class="title">戦闘の流れ</p>
+        <p class="content">
+            戦闘時、自身の所持するフラグメントの先頭10個からステータス・スキル設定を作成します。<br>
+            挑んだ側を先攻、挑まれた側を後攻として、それぞれが設定されたスキルを順番に繰り返します。<br>
+            この1ループを<span class="underline">1ターン</span>と呼称します。<br>
+            <br>
+            戦闘には<span class="underline">間合</span>という概念が存在します。彼我の距離を表します。移動系のスキルによってこれを変更しながら戦います。<br>
+            初期値は10です。<br>
+            <br>
+            スキルは、基本的に一番上に設定されたものを発動します。<br>
+            スキル効果に「消耗(10)」があるとき、現在の自分のMPが10未満であればその時点でスキルを中断してひとつ下のスキルの発動を試みます。<br>
+            このように条件次第でスキルが中断され、その次のスキルが発動する場合があります。<br>
+            <br>
+            スキルの効果によって相手、または自分のHPが0以下になった時点で戦闘が終了し、勝敗を決定します。<br>
+            またそれ以外にも、ターンが30以上になれば時間切れ（引分）、間合が一定以上開けば逃走として戦闘を終了します。<br>
+            引分・逃走で戦闘が終了した場合は、フラグメントの奪い取りなどは発生しません。
+        </p>
+    </div>
+    <div class="window">
+        <p class="title">スキルの効果</p>
+        <p class="content">
+            <dl>
+                <dt>消耗</dt>
+                <dd>MPを消費する。現在MPがこの値以下であればスキルを中断する。</dd>
+                <dt>間合</dt>
+                <dd>現在の間合がこの範囲内であればそのままスキルを発動する。範囲外であればスキルを中断する。</dd>
+                <dt>攻撃</dt>
+                <dd>相手のHPを減らす。</dd>
+                <dt>回復</dt>
+                <dd>自身のHPを増やす。上限はない。</dd>
+                <dt>集中</dt>
+                <dd>自身のMPを増やす。上限はない。</dd>
+            </dl>
+            それ以外にも様々な効果が存在します。
+        </p>
+    </div>
+    <div class="window">
+        <p class="title">スキル一例</p>
+        <p class="content">
+            <dl>
+                <dt>物理攻撃<span>共通して　・ATK依存ダメージ　・消耗なし、あるいは少なめ　・厳しい間合条件　の特徴がある。</span></dt>
+                <dd>
+                    スラッシュ<span class="effect">間合(2~8), 攻撃(ATK)</span><br>
+                    バックスラッシュ<span class="effect">間合(6~10), 攻撃(ATK), 移動(1)</span><br>
+                    ダブルクオート<span class="effect">間合(2~6), 攻撃(ATK*2/3), 攻撃(ATK*2/3)</span><br>
+                    アンパサンド<span class="effect">間合(4~4), 攻撃(ATK*2)</span><br>
+                </dd>
+            </dl>
+            <dl>
+                <dt>魔法攻撃<span>"Strings"原生の魔法。共通して　・固定ダメージ　・MP消費(TECによって軽減)　・広い間合　の特徴がある。</span></dt>
+                <dd>
+                    電熱魔法<span class="effect">間合(0~14), 消耗(6-TEC/2), 攻撃(5)</span><br>
+                    冷血魔法<span class="effect">間合(2~18), 消耗(8-TEC/2), 攻撃(5), 移動(1)</span><br>
+                    光線魔法<span class="effect">消耗(12-TEC/2), 攻撃(5), 攻撃(5)</span><br>
+                    即死魔法<span class="effect">消耗(33-TEC/4), 攻撃(27)</span><br>
+                </dd>
+            </dl>
+            <dl>
+                <dt>特殊攻撃<span>物理・魔法どちらの特徴も当てはまらない攻撃スキル。</span></dt>
+                <dd>
+                    Div-2<span class="effect">間合(4~7), 消耗(MP/2), 攻撃(相手HP/2)</span><br>
+                    サガク剣<span class="effect">間合(5~11), 攻撃(相手HP-自分HP)</span><br>
+                </dd>
+            </dl>
+            <dl>
+                <dt>移動技</dt>
+                <dd>
+                    詰め寄る<span class="effect">間合(1~19), 移動(-1)</span><br>
+                    縫天<span class="effect">間合(8~11), 消耗(3), 移動(-4)</span><br>
+                    地縛<span class="effect">間合(3~7), 消耗(5), 移動(4)</span><br>
+                    星駆け<span class="effect">間合(9~18), 消耗(3), 移動(-5)</span><br>
+                </dd>
+            </dl>
+            <dl>
+                <dt>その他</dt>
+                <dd>
+                    詠唱<span class="effect">集中(TEC/4)</span><br>
+                    精神統一<span class="effect">自傷(TEC/2), 集中(TEC/2)</span><br>
+                    ストロールグリーン<span class="effect">間合(6~19), 消耗(20-TEC), 間合変更(13)</span><br>
+                    ヒートアップ<span class="effect">間合(2~7), 強命消耗(5-TEC/5), ATK強化(ATK*5/4)</span><br>
+                </dd>
+            </dl>
+            <dl>
+                <dt>また、通常のスキルとは違うタイミングで発動するスキルも存在します。</dt>
+                <dd>
+                    棘鎧<span class="effect">(反応) 貫通攻撃(1)</span><br>
+                    リベンジャー<span class="effect">(反応) 集中(2)</span><br>
+                    ホワイトハウル<span class="effect">(開始) 攻撃(ATK/2)</span><br>
+                    脱兎<span class="effect">(敗北) 回復(5), 移動(4)</span><br>
+                </dd>
+            </dl>
+            <dl>
+                <dt>以下は存在しないスキルです。</dt>
+                <dd>
+                    『永久の夢』<span class="effect">(世界観) 全ステータス変動無効</span><br>
+                    Insanity<span class="effect">(無感) この効果が閲覧されたとき, 貫通攻撃(9999)</span><br>
+                </dd>
+            </dl>
+            <br>
+        </p>
+    </div>
+</body>

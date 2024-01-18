@@ -11,7 +11,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </div>
     <div id="header">
-        <span class="title">"Strings".Trailer</span><span class="menu"><a href="./index.html#desc">概要</a><a href="./index.html#system">システム</a><a href="./index.html#attention">諸注意</a><a href="./index.html#schedule">公開予定</a><a href="#fragments">フラグメント</a></span>
+        <span class="title">"Strings".Trailer</span><span class="menu"><a href="./index.html#desc">概要</a><a href="./index.html#system">システム</a><a href="./index.html#attention">諸注意</a><a href="./index.html#schedule">公開予定</a><a href="#fragments">フラグメント</a><a href="./battle.html">戦闘システム</a></span>
     </div>
     <div class="window">
         <a id="fragments" class="anchor"></a>
@@ -19,62 +19,32 @@
     </div>
     <div class="tab">
         <div class="fragment">
-            <div class="head"><p class="name">"ラッキーラビット"</p><p class="lore">あなたの名前。決して亡くさないよう、零さないように。</p></div>
-            <p class="effect">HP+20, MP+20, ATK+5, SPD+5</p>
+            <div class="head"><p class="name">(あなたの名前)</p><p class="lore">あなたの名前。決して亡くさないよう、零さないように。</p></div>
+            <p class="effect">HP+20, MP+20, ATK+5, TEC+5</p>
         </div>
         <div class="fragment">
             <div class="head"><p class="name">錆びついた剣</p><p class="lore">錆びて毀れた剣。かろうじて使えなくもない。</p></div>
             <p class="effect">ATK+2</p>
-            <div class="skills">
-                <div>
-                    <div class="head"><p class="name">スラッシュ</p><p class="lore">刃物を構え、斬り掛かる。</p></div>
-                    <p class="effect">攻撃(ATK/2)</p>
-                </div>
-            </div>
         </div>
         <div class="fragment">
-            <div class="head"><p class="name">ファイアバレット</p><p class="lore">炎の弾丸を生成し、射出する魔法。<br class="narrow">人を傷付けるには十分な威力。</p></div>
-            <p class="effect">SP+3, TEC+1</p>
-            <div class="skills">
-                <div>
-                    <div class="head"><p class="name">ファイアバレット</p><p class="lore">炎の弾丸を生成・射出する。</p></div>
-                    <p class="effect">攻撃(6+ATK/4,火), 消耗(6-TEC)</p>
-                </div>
-            </div>
+            <div class="head"><p class="name">アーケトロン</p><p class="lore">基礎的な熱魔法の知識。</div>
+            <p class="effect">MP+3, TEC+1</p>
         </div>
         <div class="fragment">
             <div class="head"><p class="name">ポショーン</p><p class="lore">ポーションの偽物。なぜか本物よりも高価。</p></div>
             <p class="effect">HP+1</p>
-            <div class="skills">
-                <div>
-                    <div class="head"><p class="name">回復薬</p><p class="lore">傷を癒す薬を使用する。</p></div>
-                    <p class="effect">回復(8), 消耗(6)</p>
-                </div>
-            </div>
         </div>
         <div class="fragment">
             <div class="head"><p class="name">海のおもいで</p><p class="lore">いつか誰かと海に行った記憶。<br class="narrow">浅瀬に足を浸して、二人ではしゃいで、笑いあった。</p></div>
-            <p class="effect">HP+6, SP+2, ATK-1</p>
+            <p class="effect">HP+6, MP+2, ATK-1</p>
         </div>
         <div class="fragment">
             <div class="head"><p class="name">崩壊する街</p><p class="lore">家が、道路が、街が崩れていく。大きなものに踏みつぶされて。<br class="narrow">それは僕等を見下ろして笑っていた。</p></div>
-            <p class="effect">HP-2, ATK+8</p>
-            <div class="skills">
-                <div>
-                    <div class="head"><p class="name">アバドーン</p><p class="lore">重力場を生成し、周囲を崩壊させる。</p></div>
-                    <p class="effect">攻撃(10), 自傷(14-TEC), 消耗(16-TEC*2)</p>
-                </div>
-            </div>
+            <p class="effect">HP-2, ATK+4</p>
         </div>
         <div class="fragment">
             <div class="head"><p class="name">剣の記憶</p><p class="lore">空の道場、ただ剣を振る音だけがあった。<br class="narrow">悔しかったのだ。次こそはあいつに勝ってやる。</p></div>
-            <p class="effect">ATK+5</p>
-            <div class="skills">
-                <div>
-                    <div class="head"><p class="name">パワースラッシュ</p><p class="lore">力強く斬り掛かる。</p></div>
-                    <p class="effect">攻撃(ATK), 消耗(5-TEC)</p>
-                </div>
-            </div>
+            <p class="effect">ATK+4</p>
         </div>
         <div class="fragment">
             <div class="head"><p class="name">金髪碧眼</p><p class="lore">あなたは光を透かす金の髪、深い海のような碧の瞳を持っている。</p></div>
@@ -86,7 +56,7 @@
         </div>
         <div class="fragment">
             <div class="head"><p class="name">むねがちいさい</p><p class="lore">一種のステータスであるとされている。</p></div>
-            <p class="effect">HP+1, SP+1, ATK+1, TEC+1, SPD+1</p>
+            <p class="effect">HP+1, MP+1, ATK+1, TEC+1</p>
         </div>
         <div class="fragment">
             <div class="head"><p class="name">声が良い</p><p class="lore">あなたは美声を持っている。</p></div>
@@ -94,7 +64,7 @@
         </div>
         <div class="fragment">
             <div class="head"><p class="name">飛行能力</p><p class="lore">あなたは何らかの手段で空を飛ぶことが出来る。<br class="narrow">それによって行ける場所もあるだろう。</p></div>
-            <p class="effect">SPD+1</p>
+            <p class="effect">MP+1</p>
         </div>
         <div class="fragment">
             <div class="head"><p class="name">地を歩くもの</p><p class="lore">あなたの足は確りと大地を踏みしめている。<br class="narrow">その一歩は小さく、そして偉大だ。</p></div>
@@ -102,31 +72,19 @@
         </div>
         <div class="fragment">
             <div class="head"><p class="name">果て無き知識欲</p><p class="lore">ひどく乾いている。水ごときでは癒えない。<br class="narrow">ただ遠大なる知識だけが僕を潤すのだ。</p></div>
-            <p class="effect">HP-1, SP-1, TEC+5</p>
+            <p class="effect">HP-1, MP-1, TEC+3</p>
         </div>
         <div class="fragment">
             <div class="head"><p class="name">恋心</p><p class="lore">あの人を見つめれば胸がきゅうと苦しくなるのです。<br class="narrow">ああ、わたしきっと、恋をしているのです。</p></div>
-            <p class="effect">HP-1, SP-5, ATK+2</p>
+            <p class="effect">HP+1, MP-5, ATK+1</p>
         </div>
         <div class="fragment">
             <div class="head"><p class="name">メガホン</p><p class="lore">大声を出すためのアイテム。<br class="narrow">わーーーー！！！！！！！！！！！！</p></div>
-            <p class="effect">ATK+4</p>
-            <div class="skills">
-                <div>
-                    <div class="head"><p class="name">シャウト</p><p class="lore">大きな声を出す。チャット上で使用可能。</p></div>
-                    <p class="effect">攻撃(6), 消耗(3)</p>
-                </div>
-            </div>
+            <p class="effect">ATK+2</p>
         </div>
         <div class="fragment">
             <div class="head"><p class="name">ユニークフラグメント</p><p class="lore">あなただけの特別なフラグメント。<br class="narrow">それはきっと、名前よりもあなたを表すもの。</p></div>
             <p class="effect">????????</p>
-            <div class="skills">
-                <div>
-                    <div class="head"><p class="name">????????</p><p class="lore">????????</p></div>
-                    <p class="effect">????????</p>
-                </div>
-            </div>
         </div>
     </div>
 </body>

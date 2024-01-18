@@ -12,3 +12,24 @@ body>.window>.title{
 body>.window>.content{
     margin: 8px;
 }
+
+body>.window>dl{
+    margin: 20px;
+}
+
+dl>dt{
+    border-bottom: solid #e8e8ee 1px;
+}
+dl>dd{
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+h4>span{
+    font-weight: 800;
+    margin-right: 28px;
+}
+
+.effect{
+    margin-left: 28px;
+}
